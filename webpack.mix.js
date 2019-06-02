@@ -10,14 +10,15 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
-
-mix.less('./style.less', './').webpackConfig({
+  mix.less('./style.less', './')
+  .webpackConfig({
     devtool: 'source-map'
   })
   .sourceMaps()
   .options({
     processCssUrls: false,
   });
+
 
 // Full API
 // mix.js(src, output);
@@ -45,7 +46,7 @@ mix.less('./style.less', './').webpackConfig({
 // mix.webpackConfig({}); <-- Override webpack.config.js, without editing the file directly.
 // mix.babelConfig({}); <-- Merge extra Babel configuration (plugins, etc.) with Mix's default.
 // mix.then(function () {}) <-- Will be triggered each time Webpack finishes building.
-// mix.dump(); <-- Dump the generated webpack config object t the console.
+// mix.dump(); <-- Dump the generated webpack config object to the console.
 // mix.extend(name, handler) <-- Extend Mix's API with your own components.
 // mix.options({
 //   extractVueStyles: false, // Extract .vue component styling to file, rather than inline.
